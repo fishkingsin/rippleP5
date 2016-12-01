@@ -24,7 +24,7 @@ class Ripple {
     r1                 = new float[xRes][yRes];
     r2                 = new float[xRes][yRes];
     decay              = .99;  // the speed at which the waves decay (1.0 is no decay) (0.0 is instant decay to nothing)
-    heightMulti        = .02;  // a multiplier for the height of the waves
+    heightMulti        = .1;  // a multiplier for the height of the waves
   }
 
   void exist() {
@@ -120,7 +120,7 @@ class Ripple {
         //  //fill(0,z2*160,z2*255,pow(10,0.85+z2*2));
         //  fill(0, z1*160, z1*255, pow(10, 0.85+z1*2));
         //}
-        fill(zp);
+        fill(map(abs(r1[x][y]),0,100,0,255));
         vertex(xp, yp, zp);
         nx+=ns;
         xp = (x - xRes/2) * res;
@@ -146,7 +146,7 @@ class Ripple {
         //  //fill(0,z2*160,z2*255,pow(10,0.85+z2*2));
         //  fill(0, z1*160, z1*255, pow(10, 0.85+z1*2));
         //}
-        fill(zp);
+        fill(map(abs(r1[x][y-1]),0,100,0,255));
         vertex(xp, yp, zp);
         //rect(xp, yp, 10, 10);
       }

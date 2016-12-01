@@ -54,9 +54,9 @@ int ySize           = 600/2;
 int xMid            = xSize/2;//
 int yMid            = ySize/2;//
 
-int xRes            = 60;//60
-int yRes            = 60;//60
-int res             = 15;//15
+int xRes            = 32;//60
+int yRes            = 32;//60
+int res             = 60;//15
 public int tt=0;
 public int kkk;
 public float yoff, zoff, ns=0.1, zs=8;
